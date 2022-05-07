@@ -3,7 +3,7 @@ import { CellHook, PageHook } from './models'
 /**
  * Ratio between font size and font height. The number comes from jspdf's source code
  */
-export const FONT_ROW_RATIO = 1.15
+export const FONT_ROW_RATIO = 1.6
 
 export interface LineWidths {
   bottom: number
@@ -76,25 +76,25 @@ export type ColumnInput =
   | string
   | number
   | {
-    header?: CellInput
-    title?: CellInput // deprecated (same as header)
-    footer?: CellInput
-    dataKey?: string | number
-    key?: string | number // deprecated (same as dataKey)
-  }
+      header?: CellInput
+      title?: CellInput // deprecated (same as header)
+      footer?: CellInput
+      dataKey?: string | number
+      key?: string | number // deprecated (same as dataKey)
+    }
 
 export type Color = [number, number, number] | number | string | false
 export type MarginPaddingInput =
   | number
   | number[]
   | {
-    top?: number
-    right?: number
-    bottom?: number
-    left?: number
-    horizontal?: number
-    vertical?: number
-  }
+      top?: number
+      right?: number
+      bottom?: number
+      left?: number
+      horizontal?: number
+      vertical?: number
+    }
 
 export interface CellDef {
   rowSpan?: number
